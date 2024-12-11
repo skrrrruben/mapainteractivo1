@@ -30,7 +30,7 @@
       }).addTo(map);
 
       var wmsLayer = L.tileLayer.wms("https://ec2-13-51-100-199.eu-north-1.compute.amazonaws.com:8443/geoserver/ows?", {
-          layers: "MongoDBDD:generadores",
+          layers: "MongoDBDD:redeselectricas",
           format: "image/png",
           transparent: true,
         })
@@ -66,8 +66,8 @@
           bbox: map.getBounds().toBBoxString(),
           height: size.y,
           width: size.x,
-          layers: "MongoDBDD:generadores",
-          query_layers: "MongoDBDD:generadores",
+          layers: "MongoDBDD:redeselectricas",
+          query_layers: "MongoDBDD:redeselectricas",
           info_format: "application/json",
           x: Math.round(point.x),
           y: Math.round(point.y),
